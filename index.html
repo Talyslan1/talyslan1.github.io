@@ -3,27 +3,52 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Página pessoal de Talyslan Canabarro, estudante de Bacharelado em Sistemas de Informação no IFAL"
+    />
+    <meta name="author" content="Talyslan Canabarro" />
     <title>Página Pessoal | Talyslan Canabarro</title>
   </head>
+
   <body>
-    <header>
+    <a href="#main-content" class="skip-link"
+      >Pular para o conteúdo principal</a
+    >
+
+    <header role="banner">
       <h1>Talyslan Cauan Pimentel Canabarro</h1>
-      <h2>1º Período - Bacharelado em Sistemas de Informação</h2>
-      <img
-        src="./public/talyslan.webp"
-        alt="Foto de Talyslan Canabarro"
-        width="300"
-      />
+      <p><strong>1º Período</strong> - Bacharelado em Sistemas de Informação</p>
+
+      <figure>
+        <img
+          src="./public/talyslan.webp"
+          alt="Foto de perfil de Talyslan Canabarro"
+          width="300"
+          loading="eager"
+        />
+        <figcaption>Talyslan Canabarro</figcaption>
+      </figure>
     </header>
 
-    <main>
-      <section>
-        <h3>Data de Nascimento</h3>
-        <p>20/06/2006</p>
+    <nav role="navigation" aria-label="Navegação principal">
+      <ul>
+        <li><a href="#sobre-mim">Sobre Mim</a></li>
+        <li><a href="#conhecimentos">Conhecimentos</a></li>
+        <li><a href="#curso">Sobre o Curso</a></li>
+      </ul>
+    </nav>
+
+    <main id="main-content" role="main">
+      <section aria-labelledby="nasc-heading">
+        <h2 id="nasc-heading">
+          <span class="sr-only">Data de </span>Nascimento
+        </h2>
+        <p><time datetime="2006-06-20">20 de junho de 2006</time></p>
       </section>
 
-      <article>
-        <h3>Sobre Mim</h3>
+      <article aria-labelledby="sobre-heading">
+        <h2 id="sobre-heading">Sobre Mim</h2>
         <p>
           Gosto bastante de tecnologia e programação, principalmente
           desenvolvimento web. No meu tempo livre, curto estudar coisas novas,
@@ -33,7 +58,6 @@
           basquete. Tenho interesse em crescer como desenvolvedor e trabalhar
           com projetos cada vez mais complexos.
         </p>
-
         <p>
           Atualmente estou focado em aprofundar meus conhecimentos em
           algoritmos, testes automatizados e arquitetura de software. Tenho
@@ -44,39 +68,51 @@
         </p>
       </article>
 
-      <section>
-        <h3>Conhecimentos na Área do Curso</h3>
-        <ul>
-          <li>JavaScript, TypeScript e arquitetura moderna de front-end</li>
-          <li>React, Next.js e gerenciamento de estado (React Query)</li>
-          <li>HTML, CSS, Tailwind e construção de interfaces responsivas</li>
-          <li>APIs REST, integrações com Firebase e Google Workspace</li>
-          <li>Bancos de dados SQL e NoSQL (modelagem e consultas)</li>
-          <li>Boas práticas (Clean Code, SOLID) e Design Patterns</li>
-          <li>Testes automatizados e TDD</li>
-          <li>Noções de arquitetura de software e organização de projetos</li>
+      <section id="conhecimentos" aria-labelledby="conhec-heading">
+        <h2 id="conhec-heading">Conhecimentos na Área do Curso</h2>
+        <ul aria-label="Lista de conhecimentos técnicos">
+          <li>
+            <strong>Front-end:</strong> JavaScript, TypeScript, React, Next.js,
+            Tailwind
+          </li>
+          <li><strong>Back-end:</strong> APIs REST, Firebase, SQL, NoSQL</li>
+          <li>
+            <strong>Práticas:</strong> Clean Code, SOLID, Design Patterns, TDD
+          </li>
+          <li>
+            <strong>Arquitetura:</strong> Organização de projetos, gerência de
+            estado
+          </li>
         </ul>
       </section>
+    </main>
 
-      <aside>
-        <h3>Curso</h3>
-        <p>
-          Atualmente curso Bacharelado em Sistemas de Informação no Instituto
-          Federal de Alagoas (IFAL), onde estudo fundamentos de programação,
-          algoritmos, banco de dados e engenharia de software.
-        </p>
+    <aside role="complementary" aria-labelledby="curso-heading">
+      <h2 id="curso-heading">Sobre o Curso</h2>
+      <p>
+        Curso de <strong>Bacharelado em Sistemas de Informação</strong> no
+        <abbr title="Instituto Federal de Alagoas">IFAL</abbr> — Campus Maceió,
+        onde estudo fundamentos de programação, algoritmos, banco de dados e
+        engenharia de software.
+      </p>
+      <address>
         <a
           href="https://www2.ifal.edu.br/campus/maceio/ensino/cursos/superior/bacharelado-em-sistemas-de-informacao/bacharelado-em-sistemas-de-informacao-campus-maceio"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Visitar site do IFAL no Curso de Sistemas de Informação
+          Visitar site do <abbr title="Instituto Federal de Alagoas">IFAL</abbr>
         </a>
-      </aside>
-    </main>
+      </address>
+    </aside>
 
-    <footer>
-      <p>© 2026 - Talyslan Canabarro</p>
+    <footer role="contentinfo">
+      <p>
+        © <time datetime="2026">2026</time> —
+        <a href="mailto:talyslancpc@email.com" rel="author"
+          >Talyslan Canabarro</a
+        >
+      </p>
     </footer>
   </body>
 </html>
