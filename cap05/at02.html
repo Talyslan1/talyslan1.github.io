@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PWEB1 — Cap. 05 — AT02 — Cadastro de Usuário</title>
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+      <header>
+        <h1>Cadastro de Usuário</h1>
+        <p><a href="../index.html">← Voltar para a página principal</a></p>
+      </header>
+
+      <main id="main-content">
+        <form action="https://httpbin.org/post" method="POST">
+          <div class="form-group">
+            <label for="nome">Nome completo</label>
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              required
+              minlength="3"
+              autocomplete="name"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              autocomplete="email"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="senha">Senha</label>
+            <input
+              type="password"
+              id="senha"
+              name="senha"
+              required
+              minlength="8"
+              autocomplete="new-password"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="nascimento">Data de nascimento</label>
+            <input
+              type="date"
+              id="nascimento"
+              name="nascimento"
+              required
+            />
+          </div>
+
+          <fieldset>
+            <legend>Gênero</legend>
+            <div class="radio-group">
+              <label for="genero-masculino">
+                <input
+                  type="radio"
+                  id="genero-masculino"
+                  name="genero"
+                  value="masculino"
+                />
+                Masculino
+              </label>
+              <label for="genero-feminino">
+                <input
+                  type="radio"
+                  id="genero-feminino"
+                  name="genero"
+                  value="feminino"
+                />
+                Feminino
+              </label>
+              <label for="genero-outro">
+                <input
+                  type="radio"
+                  id="genero-outro"
+                  name="genero"
+                  value="outro"
+                />
+                Outro
+              </label>
+              <label for="genero-prefiro_nao_informar">
+                <input
+                  type="radio"
+                  id="genero-prefiro_nao_informar"
+                  name="genero"
+                  value="prefiro_nao_informar"
+                />
+                Prefiro não informar
+              </label>
+            </div>
+          </fieldset>
+
+          <div class="checkbox-group">
+            <label for="aceite">
+              <input
+                type="checkbox"
+                id="aceite"
+                name="aceite"
+                value="sim"
+                required
+              />
+              Aceito os termos de uso
+            </label>
+          </div>
+
+            <button type="submit">Criar conta</button>
+            <button type="reset">Limpar campos</button>
+        </form>
+      </main>
+    </div>
+  </body>
+</html>
