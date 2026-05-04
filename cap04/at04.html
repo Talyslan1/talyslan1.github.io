@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Página de recursos multimídia com vídeo, áudio, iframe e imagem responsiva — Atividade 4 do Capítulo 4."
+    />
+    <title>Recursos Multimídia — Cap. 4 / Ativ. 4</title>
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link"
+      >Pular para o conteúdo principal</a
+    >
+
+    <header>
+      <p>
+        <a class="back-link" href="../index.html"
+          >← Voltar à página principal</a
+        >
+      </p>
+      <h1>Recursos Multimídia — Programação Web 1</h1>
+    </header>
+
+    <main id="main-content">
+      <section aria-labelledby="video-heading">
+        <h2>Aula em Vídeo</h2>
+        <figure>
+          <video
+            controls
+            width="800"
+            height="450"
+            poster="poster-aula.jpg"
+            preload="metadata"
+          >
+            <source src="../public/videos/bob.mp4" type="video/mp4" />
+            <source src="../public/videos/bob.webm" type="video/webm" />
+            <track
+              kind="subtitles"
+              src="../public/videos/legendas/bob.vtt"
+              srclang="pt"
+              label="Português"
+              default
+            />
+            <p>
+              Seu navegador não suporta vídeo HTML5.
+              <a href="../public/videos/bob.mp4">Baixe o vídeo aqui</a>.
+            </p>
+          </video>
+          <figcaption>
+            Vídeo 1 — Introdução ao HTML Semântico. Produção própria, IFAL,
+            2026.
+          </figcaption>
+        </figure>
+      </section>
+
+      <section aria-labelledby="audio-heading">
+        <h2>Podcast — Tecnologias Web</h2>
+        <figure>
+          <audio controls preload="metadata">
+            <source src="../public/audio/episodio-01.mp3" type="audio/mpeg" />
+            <source src="../public/audio/episodio-01.ogg" type="audio/ogg" />
+            <p>
+              Seu navegador não suporta áudio HTML5.
+              <a href="../public/audio/episodio-01.mp3">Baixe o episódio aqui</a
+              >.
+            </p>
+          </audio>
+          <figcaption>
+            Episódio 1 — Evolução das Tecnologias Web. Confira a
+            <a href="../public/audio/transcricao.html">transcrição completa</a>.
+          </figcaption>
+        </figure>
+      </section>
+
+      <section aria-labelledby="youtube-heading">
+        <h2>Vídeo do YouTube</h2>
+        <figure>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/vRO0UfvsbDw?si=uYC3iQg8mG_Wb23O"
+            title="YouTube video player"
+            frameborder="0"
+            allow="
+              accelerometer;
+              autoplay;
+              clipboard-write;
+              encrypted-media;
+              gyroscope;
+              picture-in-picture;
+              web-share;
+            "
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+          <figcaption>
+           CACHE-ASIDE: Scalability, Performance and Software Architecture to Ace the Interview!
+            <a href="https://www.youtube.com/@RenatoAugustoTech">Renato Augusto</a>
+            no YouTube.
+          </figcaption>
+        </figure>
+      </section>
+
+      <section aria-labelledby="imagem-heading">
+        <h2>Imagem Responsiva</h2>
+        <figure>
+          <picture>
+            <source media="(min-width: 768px)" srcset="../public/images/banner-wide.jpg" />
+            <img
+              src="../public/images/banner-mobile.jpg"
+              alt="Banner promocional do curso de Programação Web 1 com ilustração de código em monitor"
+              width="800"
+              height="450"
+            />
+          </picture>
+          <figcaption>
+            Banner do curso — versão desktop (wide) e mobile. Imagem
+            ilustrativa, IFAL, 2026.
+          </figcaption>
+        </figure>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        <em
+          >Atividade 4 — Capítulo 4 | Programação Web 1 | Aluno: Talyslan
+          Canabarro</em
+        >
+        | Matrícula: 2026001051 |
+        <time datetime="2026-05-04">Maio de 2026</time>
+      </p>
+    </footer>
+  </body>
+</html>
