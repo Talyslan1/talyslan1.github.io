@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PWEB1 — Cap. 05 — AT03 — Matrícula Acadêmica</title>
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link"
+      >Pular para o conteúdo principal</a
+    >
+
+    <p><a href="../index.html">← Voltar para a página principal</a></p>
+
+    <header>
+      <h1>Solicitação de Matrícula</h1>
+    </header>
+
+    <main id="main-content">
+      <form action="https://httpbin.org/post" method="POST">
+        <p class="required-note">* Campos obrigatórios</p>
+
+        <fieldset>
+          <legend>Dados Pessoais</legend>
+
+          <div class="form-group">
+            <label for="nome" class="required">Nome completo</label>
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              required
+              minlength="5"
+              maxlength="100"
+              autocomplete="name"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="cpf" class="required">CPF</label>
+            <input
+              type="text"
+              id="cpf"
+              name="cpf"
+              required
+              pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+              placeholder="000.000.000-00"
+              title="CPF no formato 000.000.000-00"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="telefone">Telefone</label>
+            <input
+              type="tel"
+              id="telefone"
+              name="telefone"
+              pattern="\(\d{2}\)\s\d{4,5}-\d{4}"
+              placeholder="(82) 99999-9999"
+              autocomplete="tel"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email" class="required">E-mail</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              autocomplete="email"
+            />
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Dados Acadêmicos</legend>
+
+          <div class="form-group">
+            <label for="curso" class="required">Curso</label>
+            <select id="curso" name="curso" required>
+              <option value="">— Selecione um curso —</option>
+              <optgroup label="Computação">
+                <option value="sistemas_informacao">
+                  Sistemas de Informação
+                </option>
+                <option value="ciencia_computacao">
+                  Ciência da Computação
+                </option>
+                <option value="engenharia_computacao">
+                  Engenharia da Computação
+                </option>
+              </optgroup>
+              <optgroup label="Gestão">
+                <option value="administracao">Administração</option>
+                <option value="ciencias_contabeis">Ciências Contábeis</option>
+              </optgroup>
+            </select>
+          </div>
+
+          <fieldset>
+            <legend class="required">Período</legend>
+            <div class="radio-group">
+              <label for="periodo-manha">
+                <input
+                  type="radio"
+                  id="periodo-manha"
+                  name="periodo"
+                  value="manha"
+                  required
+                />
+                Manhã
+              </label>
+              <label for="periodo-tarde">
+                <input
+                  type="radio"
+                  id="periodo-tarde"
+                  name="periodo"
+                  value="tarde"
+                />
+                Tarde
+              </label>
+              <label for="periodo-noite">
+                <input
+                  type="radio"
+                  id="periodo-noite"
+                  name="periodo"
+                  value="noite"
+                />
+                Noite
+              </label>
+            </div>
+          </fieldset>
+
+          <div class="form-group">
+            <label for="ano_ingresso" class="required"
+              >Ano de ingresso pretendido</label
+            >
+            <input
+              type="number"
+              id="ano_ingresso"
+              name="ano_ingresso"
+              required
+              min="2025"
+              max="2030"
+            />
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Áreas de Interesse</legend>
+          <div class="checkbox-group">
+            <label for="interesse-web">
+              <input
+                type="checkbox"
+                id="interesse-web"
+                name="interesses[]"
+                value="desenvolvimento_web"
+              />
+              Desenvolvimento Web
+            </label>
+            <label for="interesse-banco">
+              <input
+                type="checkbox"
+                id="interesse-banco"
+                name="interesses[]"
+                value="banco_de_dados"
+              />
+              Banco de Dados
+            </label>
+            <label for="interesse-ia">
+              <input
+                type="checkbox"
+                id="interesse-ia"
+                name="interesses[]"
+                value="inteligencia_artificial"
+              />
+              Inteligência Artificial
+            </label>
+            <label for="interesse-seguranca">
+              <input
+                type="checkbox"
+                id="interesse-seguranca"
+                name="interesses[]"
+                value="seguranca_informacao"
+              />
+              Segurança da Informação
+            </label>
+            <label for="interesse-infra">
+              <input
+                type="checkbox"
+                id="interesse-infra"
+                name="interesses[]"
+                value="infraestrutura"
+              />
+              Infraestrutura
+            </label>
+          </div>
+        </fieldset>
+
+        <button type="submit">Solicitar matrícula</button>
+        <button type="reset">Limpar formulário</button>
+      </form>
+    </main>
+  </body>
+</html>
