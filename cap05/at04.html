@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PWEB1 — Cap. 05 — AT04 — Inscrição em Evento</title>
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link"
+      >Pular para o conteúdo principal</a
+    >
+    <p><a href="../index.html">← Voltar para a página principal</a></p>
+
+    <div class="container">
+      <header>
+        <h1>Inscrição — Semana de Tecnologia IFAL</h1>
+      </header>
+
+      <main id="main-content">
+        <form
+          action="https://httpbin.org/post"
+          method="post"
+          enctype="multipart/form-data"
+        >
+          <fieldset>
+            <legend>Identificação do participante</legend>
+
+            <div class="form-group">
+              <label for="nome">Nome completo</label>
+              <input
+                type="text"
+                id="nome"
+                name="nome"
+                required
+                autocomplete="name"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="email">E-mail institucional</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                autocomplete="email"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="cidade">Cidade de origem</label>
+              <input
+                type="text"
+                id="cidade"
+                name="cidade"
+                list="cidades-alagoas"
+                autocomplete="address-level2"
+              />
+              <datalist id="cidades-alagoas">
+                <option value="Maceió" />
+                <option value="Arapiraca" />
+                <option value="Palmeira dos Índios" />
+                <option value="Rio Largo" />
+                <option value="União dos Palmares" />
+                <option value="Penedo" />
+                <option value="Delmiro Gouveia" />
+                <option value="Coruripe" />
+                <option value="Girau do Ponciano" />
+                <option value="São Miguel dos Campos" />
+              </datalist>
+            </div>
+
+            <div class="form-group">
+              <label for="foto">Foto para crachá</label>
+              <input
+                type="file"
+                id="foto"
+                name="foto"
+                accept="image/jpeg,image/png"
+                aria-describedby="foto-instrucao"
+              />
+              <small id="foto-instrucao">
+                Formatos aceitos: JPG e PNG. Tamanho máximo: 2 MB.
+              </small>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Preferências para o evento</legend>
+
+            <div class="form-group">
+              <label for="chegada">Data e hora preferida para chegada</label>
+              <input type="datetime-local" id="chegada" name="chegada" />
+            </div>
+
+            <div class="form-group">
+              <label for="experiencia">
+                Nível de experiência: <span id="valor-experiencia">5</span>/10
+              </label>
+              <div class="range-group">
+                <input
+                  type="range"
+                  id="experiencia"
+                  name="experiencia"
+                  min="0"
+                  max="10"
+                  step="1"
+                  value="5"
+                  oninput="
+                    document.getElementById('valor-experiencia').textContent =
+                      this.value
+                  "
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="cor_camiseta"
+                >Cor de preferência para a camiseta</label
+              >
+              <input
+                type="color"
+                id="cor_camiseta"
+                name="cor_camiseta"
+                value="#1a73e8"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="oficinas">Oficinas de interesse</label>
+              <select
+                id="oficinas"
+                name="oficinas[]"
+                multiple
+                size="4"
+                aria-describedby="oficinas-instrucao"
+              >
+                <option value="web">Desenvolvimento Web</option>
+                <option value="mobile">Desenvolvimento Mobile</option>
+                <option value="ia">Inteligência Artificial</option>
+                <option value="dados">Ciência de Dados</option>
+                <option value="seguranca">Segurança da Informação</option>
+                <option value="git">Git e GitHub</option>
+              </select>
+              <small id="oficinas-instrucao">
+                Use Ctrl (ou Cmd no Mac) para selecionar mais de uma oficina.
+              </small>
+            </div>
+          </fieldset>
+
+          <input type="hidden" name="edicao" value="2026" />
+
+          <button type="submit">Confirmar inscrição</button>
+        </form>
+      </main>
+    </div>
+  </body>
+</html>
