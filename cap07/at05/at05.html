@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mini design system — Talyslan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="at05-style.css" />
+</head>
+<body>
+
+  <div class="pagina">
+
+    <nav class="pagina__nav">
+      <span>TC DS</span>
+      <a href="../../index.html">← Voltar</a>
+    </nav>
+
+    <section class="hero">
+      <h1 class="hero__titulo">TC DS</h1>
+      <p class="hero__subtitulo">
+        Meu guia de cores, tipografia e componentes para manter tudo com a mesma cara.
+      </p>
+      <a class="hero__cta" href="#componentes">Ver os componentes</a>
+    </section>
+
+    <header class="pagina__cabecalho">
+      <h1>Componentes do TC DS</h1>
+      <p>Um catálogo visual do que dá para reutilizar nos projetos</p>
+    </header>
+
+    <main id="componentes">
+
+      <section class="secao">
+        <h2 class="secao__titulo">Botões que você clica</h2>
+        <div class="botoes">
+          <button class="btn btn--primario" type="button">Ação principal</button>
+          <button class="btn btn--secundario" type="button">Ação secundária</button>
+          <button class="btn btn--perigo" type="button">Ação destrutiva</button>
+          <button class="btn btn--primario" type="button" disabled>Desabilitado</button>
+        </div>
+      </section>
+
+      <section class="secao secao--alt">
+        <h2 class="secao__titulo">Cartões de conteúdo</h2>
+        <div class="cards">
+          <article class="card">
+            <span class="card__badge">Destaque</span>
+            <div class="card__imagem"></div>
+            <div class="card__corpo">
+              <h3 class="card__titulo">Título do card</h3>
+              <p class="card__texto">Descrição do conteúdo do card com informações resumidas sobre o recurso.</p>
+              <a class="card__link" href="#">Saiba mais →</a>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card__imagem card__imagem--alt"></div>
+            <div class="card__corpo">
+              <h3 class="card__titulo">Componentes UI</h3>
+              <p class="card__texto">Biblioteca de elementos prontos para acelerar o desenvolvimento front-end.</p>
+              <a class="card__link" href="#">Saiba mais →</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="secao">
+        <h2 class="secao__titulo">Paleta de cores</h2>
+        <table class="tokens">
+          <thead>
+            <tr>
+              <th>Amostra</th>
+              <th>Nome</th>
+              <th>Valor</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="tokens__amostra" style="background-color: #2563eb;"></span></td>
+              <td>--cor-primaria</td>
+              <td>#2563eb</td>
+            </tr>
+            <tr>
+              <td><span class="tokens__amostra" style="background-color: #7c3aed;"></span></td>
+              <td>--cor-secundaria</td>
+              <td>#7c3aed</td>
+            </tr>
+            <tr>
+              <td><span class="tokens__amostra" style="background-color: #f59e0b;"></span></td>
+              <td>--cor-destaque</td>
+              <td>#f59e0b</td>
+            </tr>
+            <tr>
+              <td><span class="tokens__amostra" style="background-color: #16a34a;"></span></td>
+              <td>--cor-sucesso</td>
+              <td>#16a34a</td>
+            </tr>
+            <tr>
+              <td><span class="tokens__amostra" style="background-color: #dc2626;"></span></td>
+              <td>--cor-erro</td>
+              <td>#dc2626</td>
+            </tr>
+            <tr>
+              <td><span class="tokens__amostra" style="background-color: #1e293b;"></span></td>
+              <td>--cor-texto</td>
+              <td>#1e293b</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="secao secao--alt">
+        <h2 class="secao__titulo">Formulário de cadastro</h2>
+        <form class="form" novalidate>
+          <div class="form__grupo">
+            <label class="form__label" for="nome-05">Nome completo</label>
+            <input class="form__input" type="text" id="nome-05" name="nome" required placeholder="Digite seu nome" />
+            <span class="form__mensagem-erro">Campo obrigatório.</span>
+          </div>
+          <div class="form__grupo">
+            <label class="form__label" for="email-05">E-mail</label>
+            <input class="form__input" type="email" id="email-05" name="email" required placeholder="tcpc2@aluno.ifal.edu.br" />
+            <span class="form__mensagem-erro">Informe um e-mail válido.</span>
+          </div>
+          <div class="form__grupo">
+            <label class="form__label" for="senha-05">Senha</label>
+            <input class="form__input" type="password" id="senha-05" name="senha" required minlength="6" placeholder="Mínimo 6 caracteres" />
+            <span class="form__mensagem-erro">Senha muito curta.</span>
+          </div>
+          <div class="form__grupo">
+            <label class="form__label" for="bio-05">Bio (opcional)</label>
+            <input class="form__input" type="text" id="bio-05" name="bio" placeholder="Conte um pouco sobre você" />
+          </div>
+          <button class="form__botao" type="submit">Cadastrar</button>
+        </form>
+      </section>
+
+    </main>
+
+    <footer class="pagina__rodape">
+      <p>TC DS — Talyslan · PWEB1 · Capítulo 7</p>
+    </footer>
+
+  </div>
+
+</body>
+</html>

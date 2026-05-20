@@ -1,0 +1,94 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Lora", Georgia, serif;
+  line-height: 1.7;
+  background-color: #f7f5f0;
+  color: #2d3748;
+}
+
+.container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+h1 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+h2 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1.25rem;
+  font-size: 1rem;
+}
+
+blockquote {
+  border-left: 4px solid #8b6914;
+  padding-left: 1.25rem;
+  font-style: italic;
+  color: #5a4a2a;
+  margin: 1.5rem 0;
+}
+
+header,
+footer {
+  padding: 1.5rem;
+  background-color: #ede8df;
+  border-radius: 4px;
+}
+
+header {
+  margin-bottom: 2rem;
+}
+
+footer {
+  margin-top: 2rem;
+}
+
+body > header {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  background-color: transparent;
+}
+
+body > header h1 {
+  font-size: 1.25rem;
+  font-family: "Lora", Georgia, serif;
+}
+
+body > header a {
+  color: #2b6cb0;
+}
+
+code {
+  font-family: monospace;
+  background-color: #e2e8f0;
+  padding: 0.1em 0.3em;
+  border-radius: 3px;
+}
+
+time {
+  color: #718096;
+  font-size: 0.95rem;
+}

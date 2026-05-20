@@ -1,0 +1,213 @@
+body {
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+  color: #1a202c;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+body > header {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+body > header a {
+  color: #2b6cb0;
+}
+
+section {
+  margin-bottom: 2.5rem;
+  padding: 1.25rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+}
+
+section h2 {
+  margin-bottom: 1rem;
+  color: #2d3748;
+}
+
+#sec-atributo ul {
+  list-style: none;
+  padding: 0;
+}
+
+#sec-atributo li {
+  margin-bottom: 0.5rem;
+}
+
+#sec-atributo a[href^="https"] {
+  color: #22863a;
+}
+
+#sec-atributo a[href^="http://"] {
+  color: #cb2431;
+}
+
+#sec-atributo a[href^="http://"]::after {
+  content: " ⚠";
+}
+
+#sec-atributo a[href$=".pdf"] {
+  color: #e36209;
+}
+
+#sec-atributo a[href$=".pdf"]::after {
+  content: " [PDF]";
+}
+
+#sec-atributo a[href^="#"] {
+  color: #718096;
+  font-style: italic;
+}
+
+#sec-atributo a[target="_blank"]::after {
+  content: " ↗";
+}
+
+#sec-estrutural ol {
+  padding-left: 0;
+  list-style-position: inside;
+}
+
+#sec-estrutural li {
+  padding: 0.5rem 0.75rem;
+  margin-bottom: 0.25rem;
+}
+
+#sec-estrutural li:first-child {
+  font-weight: bold;
+}
+
+#sec-estrutural li:last-child {
+  color: #6b46c1;
+}
+
+#sec-estrutural li:nth-child(even) {
+  background-color: #ebf8ff;
+}
+
+#sec-estrutural li:nth-child(odd) {
+  background-color: #f7fafc;
+}
+
+#sec-estrutural li:nth-child(3) {
+  border-left: 4px solid #2b6cb0;
+}
+
+#sec-estado form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+#sec-estado label {
+  font-weight: 600;
+}
+
+#sec-estado input {
+  padding: 0.5rem;
+  border: 1px solid #cbd5e0;
+  border-radius: 4px;
+}
+
+#sec-estado input:focus {
+  outline: 2px solid #3182ce;
+  outline-offset: 2px;
+}
+
+#sec-estado input:disabled {
+  background-color: #e2e8f0;
+  cursor: not-allowed;
+}
+
+#sec-estado input:required {
+  border-left: 3px solid #d69e2e;
+}
+
+#sec-estado input:valid {
+  border-color: #38a169;
+}
+
+#sec-estado input:invalid {
+  border-color: #e53e3e;
+}
+
+#sec-estado input[type="checkbox"]:checked + label {
+  font-weight: bold;
+}
+
+#sec-estado button {
+  padding: 0.6rem 1.25rem;
+  background-color: #3182ce;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+#sec-estado button:hover {
+  background-color: #2c5282;
+}
+
+.citacao::before {
+  content: "\201C";
+  font-size: 2rem;
+  color: #3182ce;
+  vertical-align: middle;
+  margin-right: 0.25rem;
+}
+
+.citacao::after {
+  content: "\201D";
+  font-size: 2rem;
+  color: #3182ce;
+  vertical-align: middle;
+  margin-left: 0.25rem;
+}
+
+.obrigatorio::after {
+  content: " *";
+  color: #e53e3e;
+}
+
+::selection {
+  background-color: #faf089;
+  color: #1a202c;
+}
+
+.input-custom::placeholder {
+  color: #a0aec0;
+  font-style: italic;
+}
+
+#sec-combinadores h3 + p {
+  font-size: 1.125rem;
+  color: #2b6cb0;
+}
+
+#sec-combinadores ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 1.5rem;
+}
+
+#sec-combinadores li {
+  padding: 0.5rem 0;
+}
+
+#sec-combinadores li:not(.ativo) {
+  opacity: 0.5;
+}
+
+#sec-combinadores li.ativo {
+  font-weight: bold;
+}
+
+#sec-combinadores li.ativo::before {
+  content: "✔ ";
+  color: #38a169;
+}
