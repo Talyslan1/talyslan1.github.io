@@ -1,0 +1,741 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0b1018" />
+    <meta name="color-scheme" content="dark" />
+    <meta
+      name="description"
+      content="Afundesse — afunde nos filmes e séries. Registre, avalie e compartilhe o que você assiste."
+    />
+    <title>Afundesse • Afunde nos filmes e séries</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="at01.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo-principal">Ir para o conteúdo</a>
+
+    <header class="site-header">
+      <div class="layout-container site-header__inner">
+        <a class="logo" href="#" aria-label="Afundesse — página inicial">
+          <span class="logo__mark" aria-hidden="true">
+            <span class="logo__circle logo__circle--1"></span>
+            <span class="logo__circle logo__circle--2"></span>
+            <span class="logo__circle logo__circle--3"></span>
+          </span>
+          <span class="logo__text">Afundesse</span>
+        </a>
+
+        <nav
+          class="site-nav site-nav--desktop"
+          aria-label="Navegação principal"
+        >
+          <ul class="site-nav__list">
+            <li><a href="#filmes">Filmes</a></li>
+            <li><a href="#listas">Listas</a></li>
+            <li><a href="#membros">Membros</a></li>
+            <li><a href="#journal">Journal</a></li>
+          </ul>
+          <ul class="site-nav__actions">
+            <li><a class="btn btn--ghost" href="#">Entrar</a></li>
+            <li><a class="btn btn--primary" href="#">Criar conta</a></li>
+          </ul>
+        </nav>
+
+        <details class="nav-mobile">
+          <summary class="menu-toggle" aria-label="Abrir menu de navegação">
+            <span class="menu-toggle__bar" aria-hidden="true"></span>
+          </summary>
+
+          <nav
+            class="site-nav site-nav--mobile"
+            id="menu-principal"
+            aria-label="Navegação mobile"
+          >
+            <ul class="site-nav__list">
+              <li><a href="#filmes">Filmes</a></li>
+              <li><a href="#listas">Listas</a></li>
+              <li><a href="#membros">Membros</a></li>
+              <li><a href="#journal">Journal</a></li>
+            </ul>
+            <ul class="site-nav__actions">
+              <li><a class="btn btn--ghost" href="#">Entrar</a></li>
+              <li><a class="btn btn--primary" href="#">Criar conta</a></li>
+            </ul>
+          </nav>
+        </details>
+      </div>
+    </header>
+
+    <main id="conteudo-principal">
+      <section class="hero" aria-labelledby="hero-titulo">
+        <div class="hero__backdrop" aria-hidden="true">
+          <img
+            class="hero__bg-image"
+            src="assets/images/hero-image.webp"
+            alt=""
+            width="2880"
+            height="1800"
+          />
+          <div class="hero__gradient"></div>
+        </div>
+
+        <div class="hero__container">
+          <div class="hero__content">
+            <h1 id="hero-titulo" class="hero__title">
+              Registre o que você assistiu.<br />
+              Salve o que quer ver.<br />
+              Conte aos amigos o que vale a pena.
+            </h1>
+            <p class="hero__subtitle">
+              A rede social para quem mergulha de cabeça no cinema e nas séries —
+              disponível na web e no celular.
+            </p>
+            <div class="hero__actions">
+              <a class="btn btn--primary btn--large" href="#"
+                >Começar — é grátis!</a
+              >
+              <a class="btn btn--ghost btn--large hero__secondary" href="#filmes"
+                >Explorar filmes</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="stats reveal" aria-label="Números da comunidade">
+        <ul class="stats__grid">
+          <li class="stats__item">
+            <strong class="stats__value">3,6 bi</strong>
+            <span class="stats__label">títulos registrados</span>
+          </li>
+          <li class="stats__item">
+            <strong class="stats__value">14 mi</strong>
+            <span class="stats__label">membros ativos</span>
+          </li>
+          <li class="stats__item">
+            <strong class="stats__value">890 mi</strong>
+            <span class="stats__label">críticas publicadas</span>
+          </li>
+          <li class="stats__item">
+            <strong class="stats__value">2,1 mi</strong>
+            <span class="stats__label">listas criadas</span>
+          </li>
+        </ul>
+      </section>
+
+      <section class="trending reveal" id="filmes" aria-labelledby="trending-titulo">
+        <header class="section-header">
+          <h2 id="trending-titulo">Em alta esta semana</h2>
+          <a class="section-header__link" href="#">Ver mais</a>
+        </header>
+
+        <ul class="film-grid">
+          <li
+            class="film-card"
+            style="--poster: url('assets/images/movies/parasite.jpg')"
+            aria-label="Parasita"
+          >
+            <div class="film-card__info">
+              <h3>Parasita</h3>
+              <p>1,2M visualizações</p>
+            </div>
+          </li>
+          <li
+            class="film-card"
+            style="--poster: url('assets/images/movies/inception.jpg')"
+            aria-label="A Origem"
+          >
+            <div class="film-card__info">
+              <h3>A Origem</h3>
+              <p>980k visualizações</p>
+            </div>
+          </li>
+          <li
+            class="film-card"
+            style="--poster: url('assets/images/movies/interstellar.jpg')"
+            aria-label="Interestelar"
+          >
+            <div class="film-card__info">
+              <h3>Interestelar</h3>
+              <p>870k visualizações</p>
+            </div>
+          </li>
+          <li
+            class="film-card"
+            style="--poster: url('assets/images/movies/whiplash.jpg')"
+            aria-label="Whiplash"
+          >
+            <div class="film-card__info">
+              <h3>Whiplash</h3>
+              <p>640k visualizações</p>
+            </div>
+          </li>
+          <li
+            class="film-card"
+            style="--poster: url('assets/images/movies/get-out.jpg')"
+            aria-label="Corra!"
+          >
+            <div class="film-card__info">
+              <h3>Corra!</h3>
+              <p>520k visualizações</p>
+            </div>
+          </li>
+          <li
+            class="film-card"
+            style="--poster: url('assets/images/movies/spirited-away.jpg')"
+            aria-label="A Viagem de Chihiro"
+          >
+            <div class="film-card__info">
+              <h3>A Viagem de Chihiro</h3>
+              <p>410k visualizações</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="series reveal" id="series" aria-labelledby="series-titulo">
+        <header class="section-header">
+          <div>
+            <h2 id="series-titulo">Séries em destaque</h2>
+            <p class="section-header__desc">
+              Do binge noturno ao maratona de fim de semana — acompanhe temporadas
+              e episódios.
+            </p>
+          </div>
+          <a class="section-header__link" href="#">Ver séries</a>
+        </header>
+
+        <ul class="series-grid">
+          <li
+            class="series-card"
+            style="--poster: url('assets/images/movies/dark-knight.jpg')"
+            aria-label="Succession"
+          >
+            <div class="series-card__info">
+              <h3>Succession</h3>
+              <p>4 temporadas</p>
+            </div>
+          </li>
+          <li
+            class="series-card"
+            style="--poster: url('assets/images/movies/inception.jpg')"
+            aria-label="Dark"
+          >
+            <div class="series-card__info">
+              <h3>Dark</h3>
+              <p>3 temporadas</p>
+            </div>
+          </li>
+          <li
+            class="series-card"
+            style="--poster: url('assets/images/movies/get-out.jpg')"
+            aria-label="Stranger Things"
+          >
+            <div class="series-card__info">
+              <h3>Stranger Things</h3>
+              <p>5 temporadas</p>
+            </div>
+          </li>
+          <li
+            class="series-card"
+            style="--poster: url('assets/images/movies/parasite.jpg')"
+            aria-label="The Last of Us"
+          >
+            <div class="series-card__info">
+              <h3>The Last of Us</h3>
+              <p>2 temporadas</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="features reveal" aria-labelledby="features-titulo">
+        <h2 id="features-titulo" class="features__title">
+          O Afundesse permite que você…
+        </h2>
+
+        <ul class="features__grid">
+          <li class="feature-card">
+            <span class="feature-card__icon" aria-hidden="true">◎</span>
+            <h3>Diário completo</h3>
+            <p>
+              Registre cada filme e série que já assistiu, desde o primeiro
+              cadastro.
+            </p>
+          </li>
+          <li class="feature-card">
+            <span class="feature-card__icon" aria-hidden="true">★</span>
+            <h3>Avaliações</h3>
+            <p>
+              Classifique com estrelas (com meio ponto) e compartilhe sua
+              reação.
+            </p>
+          </li>
+          <li class="feature-card">
+            <span class="feature-card__icon" aria-hidden="true">♥</span>
+            <h3>Curtidas</h3>
+            <p>Mostre apreço por filmes, listas e críticas da comunidade.</p>
+          </li>
+          <li class="feature-card">
+            <span class="feature-card__icon" aria-hidden="true">✎</span>
+            <h3>Críticas</h3>
+            <p>Escreva resenhas e siga amigos para ler as opiniões deles.</p>
+          </li>
+          <li class="feature-card">
+            <span class="feature-card__icon" aria-hidden="true">▤</span>
+            <h3>Listas</h3>
+            <p>Monte coleções sobre qualquer tema e mantenha uma watchlist.</p>
+          </li>
+          <li class="feature-card">
+            <span class="feature-card__icon" aria-hidden="true">◉</span>
+            <h3>Estatísticas</h3>
+            <p>Acompanhe gêneros favoritos, diretores e hábitos de exibição.</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="fold reveal" aria-labelledby="fold-titulo">
+        <div class="fold__inner">
+          <div class="fold__content">
+            <h2 id="fold-titulo">Da watchlist à conversa</h2>
+            <p>
+              Organize o que quer ver, compartilhe o que amou e descubra o que a
+              galera está recomendando neste momento.
+            </p>
+          </div>
+          <ul class="fold__tags" aria-label="Gêneros em alta">
+            <li>#terror</li>
+            <li>#sci-fi</li>
+            <li>#drama</li>
+            <li>#animação</li>
+            <li>#documentário</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="lists reveal" id="listas" aria-labelledby="lists-titulo">
+        <header class="section-header">
+          <div>
+            <h2 id="lists-titulo">Listas populares</h2>
+            <p class="section-header__desc">
+              Coleções curadas pela comunidade sobre qualquer tema imaginável.
+            </p>
+          </div>
+          <a class="section-header__link" href="#">Explorar listas</a>
+        </header>
+
+        <ul class="list-grid">
+          <li class="list-card">
+            <div class="list-card__covers">
+              <img src="assets/images/movies/pulp-fiction.jpg" alt="" />
+              <img src="assets/images/movies/drive.jpg" alt="" />
+              <img src="assets/images/movies/godfather.jpg" alt="" />
+            </div>
+            <div class="list-card__body">
+              <h3>Neo-noir que muda sua vida</h3>
+              <p>por <span class="stat">cine_noir_42</span> · 48 filmes</p>
+              <p class="list-card__likes">124k curtidas</p>
+            </div>
+          </li>
+          <li class="list-card">
+            <div class="list-card__covers">
+              <img src="assets/images/movies/spirited-away.jpg" alt="" />
+              <img src="assets/images/movies/coco.jpg" alt="" />
+              <img src="assets/images/movies/la-la-land.jpg" alt="" />
+            </div>
+            <div class="list-card__body">
+              <h3>Chorar no escuro: edição animada</h3>
+              <p>por <span class="stat">ana_pixar</span> · 32 filmes</p>
+              <p class="list-card__likes">98k curtidas</p>
+            </div>
+          </li>
+          <li class="list-card">
+            <div class="list-card__covers">
+              <img src="assets/images/movies/interstellar.jpg" alt="" />
+              <img src="assets/images/movies/blade-runner.jpg" alt="" />
+              <img src="assets/images/movies/dune.jpg" alt="" />
+            </div>
+            <div class="list-card__body">
+              <h3>Sci-fi para questionar tudo</h3>
+              <p>por <span class="stat">orbita_filmes</span> · 56 filmes</p>
+              <p class="list-card__likes">87k curtidas</p>
+            </div>
+          </li>
+          <li class="list-card">
+            <div class="list-card__covers">
+              <img src="assets/images/movies/whiplash.jpg" alt="" />
+              <img src="assets/images/movies/matrix.jpg" alt="" />
+              <img src="assets/images/movies/everything-everywhere.jpg" alt="" />
+            </div>
+            <div class="list-card__body">
+              <h3>Adrenalina pura em 90 minutos</h3>
+              <p>por <span class="stat">maratona_x</span> · 27 filmes</p>
+              <p class="list-card__likes">71k curtidas</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section
+        class="testimonials reveal"
+        aria-labelledby="testimonials-titulo"
+      >
+        <header class="section-header">
+          <div>
+            <h2 id="testimonials-titulo">Críticas populares da semana</h2>
+            <p class="section-header__desc">
+              O que a comunidade está falando — humor, insight e paixão pelo
+              cinema.
+            </p>
+          </div>
+          <a class="section-header__link" href="#">Ver todas</a>
+        </header>
+
+        <ul class="testimonial-grid">
+          <li class="testimonial-card">
+            <div class="testimonial-card__film">
+              <img
+                src="assets/images/movies/get-out.jpg"
+                alt="Capa de Corra!"
+                width="70"
+                height="105"
+              />
+              <div>
+                <h3>Corra!</h3>
+                <span class="testimonial-card__year">2017</span>
+              </div>
+            </div>
+            <div class="testimonial-card__user">
+              <span class="avatar" aria-hidden="true">L</span>
+              <span class="testimonial-card__username">lia_cinema</span>
+              <span class="testimonial-card__rating" aria-label="3 de 5 estrelas"
+                >★★★</span
+              >
+              <span class="testimonial-card__badge">Curtiu</span>
+            </div>
+            <blockquote class="testimonial-card__quote">
+              Descrever esse filme é como explicar um cachorro pra quem nunca viu
+              um na vida.
+            </blockquote>
+            <p class="testimonial-card__likes">38,7k curtidas</p>
+          </li>
+
+          <li class="testimonial-card">
+            <div class="testimonial-card__film">
+              <img
+                src="assets/images/movies/dark-knight.jpg"
+                alt="Capa de O Cavaleiro das Trevas"
+                width="70"
+                height="105"
+              />
+              <div>
+                <h3>O Cavaleiro das Trevas</h3>
+                <span class="testimonial-card__year">2008</span>
+              </div>
+            </div>
+            <div class="testimonial-card__user">
+              <span class="avatar avatar--2" aria-hidden="true">M</span>
+              <span class="testimonial-card__username">mak_frames</span>
+              <span
+                class="testimonial-card__rating"
+                aria-label="4 de 5 estrelas"
+                >★★★★</span
+              >
+            </div>
+            <blockquote class="testimonial-card__quote">
+              O vilão que fez todo mundo esquecer que o Batman também estava no
+              filme.
+            </blockquote>
+            <p class="testimonial-card__likes">46,6k curtidas</p>
+          </li>
+
+          <li class="testimonial-card">
+            <div class="testimonial-card__film">
+              <img
+                src="assets/images/movies/inception.jpg"
+                alt="Capa de A Origem"
+                width="70"
+                height="105"
+              />
+              <div>
+                <h3>A Origem</h3>
+                <span class="testimonial-card__year">2010</span>
+              </div>
+            </div>
+            <div class="testimonial-card__user">
+              <span class="avatar avatar--3" aria-hidden="true">Y</span>
+              <span class="testimonial-card__username">yashley_filmes</span>
+              <span
+                class="testimonial-card__rating"
+                aria-label="4 de 5 estrelas"
+                >★★★★</span
+              >
+              <span class="testimonial-card__badge">Curtiu</span>
+            </div>
+            <blockquote class="testimonial-card__quote">
+              Eles deviam mapear os sonhos usando Strava. Eu me perderia no nível
+              3 fácil.
+            </blockquote>
+            <p class="testimonial-card__likes">31,9k curtidas</p>
+          </li>
+
+          <li class="testimonial-card">
+            <div class="testimonial-card__film">
+              <img
+                src="assets/images/movies/pulp-fiction.jpg"
+                alt="Capa de Pulp Fiction"
+                width="70"
+                height="105"
+              />
+              <div>
+                <h3>Pulp Fiction</h3>
+                <span class="testimonial-card__year">1994</span>
+              </div>
+            </div>
+            <div class="testimonial-card__user">
+              <span class="avatar avatar--4" aria-hidden="true">S</span>
+              <span class="testimonial-card__username">starstruck_23</span>
+              <span
+                class="testimonial-card__rating"
+                aria-label="3 de 5 estrelas"
+                >★★★</span
+              >
+            </div>
+            <blockquote class="testimonial-card__quote">
+              A única vez que um milkshake causou tanto drama na história do
+              cinema.
+            </blockquote>
+            <p class="testimonial-card__likes">28,6k curtidas</p>
+          </li>
+
+          <li class="testimonial-card">
+            <div class="testimonial-card__film">
+              <img
+                src="assets/images/movies/coco.jpg"
+                alt="Capa de Viva"
+                width="70"
+                height="105"
+              />
+              <div>
+                <h3>Viva: A Vida é uma Festa</h3>
+                <span class="testimonial-card__year">2017</span>
+              </div>
+            </div>
+            <div class="testimonial-card__user">
+              <span class="avatar avatar--5" aria-hidden="true">A</span>
+              <span class="testimonial-card__username">anaa_diario</span>
+              <span class="testimonial-card__badge">Curtiu</span>
+            </div>
+            <blockquote class="testimonial-card__quote">
+              O monstro real é o cara atrás de mim explicando o Dia de Muertos
+              pro date dele.
+            </blockquote>
+            <p class="testimonial-card__likes">19,7k curtidas</p>
+          </li>
+
+          <li class="testimonial-card">
+            <div class="testimonial-card__film">
+              <img
+                src="assets/images/movies/interstellar.jpg"
+                alt="Capa de Interestelar"
+                width="70"
+                height="105"
+              />
+              <div>
+                <h3>Interestelar</h3>
+                <span class="testimonial-card__year">2014</span>
+              </div>
+            </div>
+            <div class="testimonial-card__user">
+              <span class="avatar avatar--6" aria-hidden="true">C</span>
+              <span class="testimonial-card__username">cine_joao</span>
+              <span
+                class="testimonial-card__rating"
+                aria-label="5 de 5 estrelas"
+                >★★★★★</span
+              >
+            </div>
+            <blockquote class="testimonial-card__quote">
+              Relatividade temporal nunca foi tão cruel. Chorei mais pelo pai do
+              que pelo planeta.
+            </blockquote>
+            <p class="testimonial-card__likes">22,1k curtidas</p>
+          </li>
+        </ul>
+      </section>
+
+      <section
+        class="just-reviewed reveal"
+        id="membros"
+        aria-labelledby="just-reviewed-titulo"
+      >
+        <header class="section-header">
+          <h2 id="just-reviewed-titulo">Recém avaliados</h2>
+          <p class="section-header__desc">
+            <strong>3,6 bilhões</strong> de títulos registrados pela comunidade
+          </p>
+        </header>
+
+        <div class="poster-marquee" aria-hidden="true">
+          <ul class="poster-strip">
+            <li><img src="assets/images/movies/drive.jpg" alt="" width="70" height="105" /></li>
+            <li><img src="assets/images/movies/matrix.jpg" alt="" width="70" height="105" /></li>
+            <li><img src="assets/images/movies/dune.jpg" alt="" width="70" height="105" /></li>
+            <li><img src="assets/images/movies/everything-everywhere.jpg" alt="" width="70" height="105" /></li>
+            <li><img src="assets/images/movies/moonlight.jpg" alt="" width="70" height="105" /></li>
+            <li><img src="assets/images/movies/blade-runner.jpg" alt="" width="70" height="105" /></li>
+            <li><img src="assets/images/movies/godfather.jpg" alt="" width="70" height="105" /></li>
+            <li><img src="assets/images/movies/la-la-land.jpg" alt="" width="70" height="105" /></li>
+            <li><img src="assets/images/movies/parasite.jpg" alt="" width="70" height="105" /></li>
+            <li><img src="assets/images/movies/whiplash.jpg" alt="" width="70" height="105" /></li>
+          </ul>
+          <ul class="poster-strip">
+            <li><img src="assets/images/movies/drive.jpg" alt="" width="70" height="105" /></li>
+            <li><img src="assets/images/movies/matrix.jpg" alt="" width="70" height="105" /></li>
+            <li><img src="assets/images/movies/dune.jpg" alt="" width="70" height="105" /></li>
+            <li><img src="assets/images/movies/everything-everywhere.jpg" alt="" width="70" height="105" /></li>
+            <li><img src="assets/images/movies/moonlight.jpg" alt="" width="70" height="105" /></li>
+            <li><img src="assets/images/movies/blade-runner.jpg" alt="" width="70" height="105" /></li>
+            <li><img src="assets/images/movies/godfather.jpg" alt="" width="70" height="105" /></li>
+            <li><img src="assets/images/movies/la-la-land.jpg" alt="" width="70" height="105" /></li>
+            <li><img src="assets/images/movies/parasite.jpg" alt="" width="70" height="105" /></li>
+            <li><img src="assets/images/movies/whiplash.jpg" alt="" width="70" height="105" /></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="journal reveal" id="journal" aria-labelledby="journal-titulo">
+        <header class="section-header">
+          <div>
+            <h2 id="journal-titulo">Do Journal</h2>
+            <p class="section-header__desc">
+              Artigos, entrevistas e listas editoriais sobre o mundo do cinema.
+            </p>
+          </div>
+          <a class="section-header__link" href="#">Ler mais</a>
+        </header>
+
+        <ul class="journal-grid">
+          <li class="journal-card">
+            <img
+              class="journal-card__img"
+              src="assets/images/movies/pulp-fiction.jpg"
+              alt=""
+              width="310"
+              height="174"
+            />
+            <div class="journal-card__body">
+              <span class="journal-card__tag">Lista</span>
+              <h3>20 filmes de mulheres que quebram regras</h3>
+              <p>Seleção editorial de obras onde protagonistas femininas viram o jogo.</p>
+            </div>
+          </li>
+          <li class="journal-card">
+            <img
+              class="journal-card__img"
+              src="assets/images/movies/interstellar.jpg"
+              alt=""
+              width="310"
+              height="174"
+            />
+            <div class="journal-card__body">
+              <span class="journal-card__tag">Entrevista</span>
+              <h3>Cartas de amor ao cinema de autor</h3>
+              <p>Diretores independentes falam sobre o futuro do filme de festival.</p>
+            </div>
+          </li>
+          <li class="journal-card">
+            <img
+              class="journal-card__img"
+              src="assets/images/movies/dark-knight.jpg"
+              alt=""
+              width="310"
+              height="174"
+            />
+            <div class="journal-card__body">
+              <span class="journal-card__tag">Editorial</span>
+              <h3>O renascimento do blockbuster inteligente</h3>
+              <p>Como blockbusters recentes equilibram espetáculo e narrativa ambiciosa.</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="apps" aria-labelledby="apps-titulo">
+        <div class="apps__inner">
+          <div class="apps__content">
+            <h2 id="apps-titulo">Leve o Afundesse com você</h2>
+            <p>
+              Registre filmes e séries no cinema, no sofá ou no ônibus. Sincronize
+              tudo entre web, iOS e Android.
+            </p>
+            <ul class="apps__stores">
+              <li><a class="btn btn--ghost" href="#">App Store</a></li>
+              <li><a class="btn btn--ghost" href="#">Google Play</a></li>
+              <li><a class="btn btn--ghost" href="#">Apple TV</a></li>
+            </ul>
+          </div>
+          <div class="apps__visual" aria-hidden="true">
+            <img src="assets/images/movies/parasite.jpg" alt="" class="apps__poster apps__poster--1" />
+            <img src="assets/images/movies/inception.jpg" alt="" class="apps__poster apps__poster--2" />
+            <img src="assets/images/movies/coco.jpg" alt="" class="apps__poster apps__poster--3" />
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-wrap reveal">
+        <div class="cta-banner" aria-labelledby="cta-titulo">
+          <h2 id="cta-titulo">Sua vida no cinema começa aqui</h2>
+          <p>
+            Crie sua conta gratuita e descubra o que a comunidade está
+            assistindo agora.
+          </p>
+          <a class="btn btn--primary btn--large" href="#"
+            >Criar conta grátis</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="layout-container site-footer__inner">
+        <a class="logo logo--footer" href="#" aria-label="Afundesse">
+          <span class="logo__mark" aria-hidden="true">
+            <span class="logo__circle logo__circle--1"></span>
+            <span class="logo__circle logo__circle--2"></span>
+            <span class="logo__circle logo__circle--3"></span>
+          </span>
+          <span class="logo__text">Afundesse</span>
+        </a>
+
+        <nav class="footer-nav" aria-label="Links do rodapé">
+          <ul>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Apps</a></li>
+            <li><a href="#">Pro</a></li>
+            <li><a href="#">Journal</a></li>
+            <li><a href="#">Ajuda</a></li>
+            <li><a href="#">Termos</a></li>
+          </ul>
+        </nav>
+
+        <p class="site-footer__copy">
+          Projeto acadêmico inspirado em
+          <a
+            href="https://letterboxd.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Letterboxd</a
+          >. © <time datetime="2026">2026</time> Talyslan Canabarro.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
