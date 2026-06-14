@@ -1,0 +1,705 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,400&display=swap");
+
+:root {
+  color-scheme: light;
+
+  --bg: #f0ebe2;
+  --surface: #faf7f2;
+  --surface-raised: #fffdf9;
+  --ink: #1e1812;
+  --ink-soft: #6a5f52;
+  --ink-faint: #9c9084;
+  --accent: #a8431f;
+  --accent-deep: #7c2f12;
+  --accent-soft: #e8c4b0;
+  --line: #d9cfc2;
+  --line-strong: #b8a898;
+  --focus: #2d5a47;
+
+  --font-display: "IBM Plex Serif", Georgia, serif;
+  --font-body: "IBM Plex Sans", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.75rem;
+  --space-4: 2.75rem;
+  --space-5: 4rem;
+
+  --radius: 3px;
+  --max: 68rem;
+  --sidebar: 19rem;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur: 0.45s;
+}
+
+body.tema-escuro {
+  color-scheme: dark;
+
+  --bg: #141210;
+  --surface: #1e1b17;
+  --surface-raised: #282420;
+  --ink: #ede8df;
+  --ink-soft: #a89f92;
+  --ink-faint: #736a5e;
+  --accent: #d4623a;
+  --accent-deep: #e8885f;
+  --accent-soft: #3d2518;
+  --line: #3a342c;
+  --line-strong: #524a40;
+  --focus: #6db89a;
+}
+
+body.tema-azul {
+  color-scheme: light;
+
+  --bg: #e6edf5;
+  --surface: #f8fafc;
+  --surface-raised: #ffffff;
+  --ink: #0f2238;
+  --ink-soft: #4a627a;
+  --ink-faint: #7a92a8;
+  --accent: #1a5080;
+  --accent-deep: #0f3558;
+  --accent-soft: #b8d4ea;
+  --line: #c5d4e2;
+  --line-strong: #8fafc8;
+  --focus: #1a5080;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--ink);
+  background-color: var(--bg);
+  transition:
+    background-color var(--dur) var(--ease),
+    color var(--dur) var(--ease);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.35;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+header {
+  position: relative;
+  z-index: 1;
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: var(--space-4) var(--space-3) var(--space-3);
+  border-bottom: 2px solid var(--ink);
+}
+
+#tituloPagina {
+  margin: 0 0 var(--space-1);
+  max-width: 14ch;
+  font-size: clamp(2rem, 5.5vw, 3.25rem);
+  letter-spacing: -0.03em;
+  transition: color 0.6s var(--ease);
+}
+
+#tituloPagina::first-line {
+  font-style: italic;
+  font-weight: 500;
+}
+
+#subtituloPagina {
+  margin: 0;
+  max-width: 36ch;
+  font-size: 0.9375rem;
+  color: var(--ink-soft);
+}
+
+#subtituloPagina::before {
+  content: "PWEB1 · ";
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+main {
+  position: relative;
+  z-index: 1;
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: var(--space-3);
+}
+
+main > hr {
+  display: none;
+}
+
+main > section {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  padding: var(--space-3);
+  animation: entrar var(--dur) var(--ease) backwards;
+}
+
+@keyframes entrar {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+
+#perfil {
+  animation-delay: 0.05s;
+}
+
+#preferencias {
+  animation-delay: 0.12s;
+}
+
+#contato {
+  animation-delay: 0.19s;
+}
+
+#estatisticas {
+  animation-delay: 0.26s;
+}
+
+#acoes {
+  animation-delay: 0.33s;
+}
+
+main > section h2 {
+  margin: 0 0 var(--space-3);
+  padding-bottom: var(--space-1);
+  font-size: 0.8125rem;
+  font-family: var(--font-mono);
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  border-bottom: 1px solid var(--line);
+}
+
+main > section h3 {
+  margin: var(--space-3) 0 var(--space-2);
+  font-size: 1rem;
+  color: var(--ink-soft);
+}
+
+@media (min-width: 52rem) {
+  main {
+    display: grid;
+    grid-template-columns: var(--sidebar) 1fr;
+    grid-template-rows: auto auto auto auto;
+    gap: var(--space-2);
+    align-items: start;
+    padding: var(--space-3) var(--space-3) var(--space-5);
+  }
+
+  #perfil {
+    grid-row: 1 / -1;
+    position: sticky;
+    top: var(--space-2);
+  }
+}
+
+#perfil {
+  text-align: left;
+}
+
+#fotoPerfil {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  margin-bottom: var(--space-3);
+  border: 1px solid var(--line-strong);
+  filter: saturate(0.92) contrast(1.02);
+  transition:
+    filter var(--dur) var(--ease),
+    outline var(--dur) var(--ease);
+}
+
+#nomePerfil {
+  margin: 0 0 var(--space-1);
+  font-size: clamp(1.5rem, 3vw, 1.875rem);
+  letter-spacing: -0.02em;
+}
+
+#matriculaPerfil {
+  margin: 0 0 var(--space-2);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  color: var(--ink-faint);
+}
+
+#cursoPerfil {
+  margin: 0;
+  display: inline-block;
+  padding: 0.3rem 0.65rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--accent-deep);
+  background: var(--accent-soft);
+  border-left: 3px solid var(--accent);
+}
+
+#biografiaPerfil {
+  margin: var(--space-3) 0 0;
+  padding-top: var(--space-3);
+  font-size: 0.9375rem;
+  color: var(--ink-soft);
+  border-top: 1px dashed var(--line);
+  transition: font-size 0.15s ease;
+}
+
+#perfil.perfil-destacado {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+  background: var(--surface-raised);
+  animation: pulsarDestaque 2s var(--ease) infinite;
+}
+
+#perfil.perfil-destacado #fotoPerfil {
+  filter: saturate(1.05) contrast(1.05);
+  outline: 3px solid var(--accent-soft);
+  outline-offset: -3px;
+}
+
+#perfil.perfil-destacado #nomePerfil {
+  color: var(--accent);
+}
+
+#preferencias > div {
+  display: grid;
+  grid-template-columns: 9rem 1fr auto;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) 0;
+  border-bottom: 1px solid var(--line);
+}
+
+#preferencias > div:last-child {
+  border-bottom: none;
+}
+
+#preferencias label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+#temaSelect {
+  width: 100%;
+  padding: 0.55rem 0.75rem;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  color: var(--ink);
+  background: var(--surface-raised);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+#temaSelect:hover {
+  border-color: var(--accent);
+}
+
+#temaSelect:focus {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+#fonteRange {
+  width: 100%;
+  height: 2px;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+
+#valorFonte {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--accent-deep);
+  min-width: 2.75rem;
+  text-align: right;
+}
+
+#preferencias div:has(#mostrarBio) {
+  grid-template-columns: auto 1fr;
+}
+
+#mostrarBio {
+  width: 1rem;
+  height: 1rem;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+
+#preferencias div:has(#mostrarBio) label {
+  cursor: pointer;
+}
+
+#contato form > div {
+  margin-bottom: var(--space-2);
+}
+
+#contato label {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+#emailInput,
+#telefoneInput {
+  width: 100%;
+  padding: 0.65rem 0;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--ink);
+  background: transparent;
+  border: none;
+  border-bottom: 1.5px solid var(--line-strong);
+  border-radius: 0;
+  transition: border-color 0.2s ease;
+}
+
+#emailInput::placeholder,
+#telefoneInput::placeholder {
+  color: var(--ink-faint);
+  font-style: italic;
+}
+
+#emailInput:focus,
+#telefoneInput:focus {
+  outline: none;
+  border-bottom-color: var(--accent);
+}
+
+#emailExibido,
+#telefoneExibido {
+  margin: var(--space-1) 0;
+  padding-left: var(--space-2);
+  font-size: 0.875rem;
+  color: var(--ink-soft);
+  border-left: 2px solid var(--line);
+}
+
+#contato strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+#estatisticas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2);
+}
+
+#estatisticas p {
+  margin: 0;
+  padding: var(--space-2);
+  background: var(--surface-raised);
+  border: 1px solid var(--line);
+}
+
+#estatisticas p:first-child {
+  border-top: 3px solid var(--accent);
+}
+
+#estatisticas p:last-child {
+  border-top: 3px solid var(--focus);
+}
+
+#contadorAcoes,
+#ultimaAcao {
+  display: block;
+  margin-top: 0.35rem;
+  font-family: var(--font-mono);
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  color: var(--ink);
+  line-height: 1.2;
+}
+
+#ultimaAcao {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--accent-deep);
+}
+
+#acoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+}
+
+button {
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  padding: 0.6rem 1rem;
+  border: 1.5px solid var(--ink);
+  border-radius: var(--radius);
+  background: transparent;
+  color: var(--ink);
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+#btnAtualizarContato {
+  margin-top: var(--space-2);
+  width: 100%;
+  background: var(--ink);
+  color: var(--surface);
+  border-color: var(--ink);
+}
+
+#btnAtualizarContato:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+#acoes button:hover {
+  background: var(--ink);
+  color: var(--surface);
+  border-color: var(--ink);
+}
+
+#btnDestacarPerfil {
+  background: var(--accent);
+  color: var(--surface);
+  border-color: var(--accent);
+}
+
+#btnDestacarPerfil:hover {
+  background: var(--accent-deep);
+  border-color: var(--accent-deep);
+}
+
+#btnRestaurar {
+  color: var(--ink-soft);
+  border-color: var(--line-strong);
+  border-style: dashed;
+}
+
+#btnRestaurar:hover {
+  color: var(--ink);
+  background: transparent;
+  border-color: var(--ink);
+  border-style: solid;
+}
+
+button:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 3px;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+footer {
+  position: relative;
+  z-index: 1;
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: var(--space-3);
+  border-top: 1px solid var(--line);
+}
+
+footer p {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+.biografia-oculta {
+  display: none;
+}
+
+.boas-vindas {
+  margin: var(--space-2) 0 0;
+  padding: var(--space-1) var(--space-2);
+  max-width: 36ch;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--accent-deep);
+  background: var(--accent-soft);
+  border-left: 3px solid var(--accent);
+  animation: boasVindasEntrar 0.5s var(--ease) backwards;
+}
+
+.boas-vindas.saindo {
+  animation: boasVindasSair 0.55s var(--ease) forwards;
+}
+
+@keyframes boasVindasEntrar {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes boasVindasSair {
+  to {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+}
+
+#fotoPerfil.foto-trocando {
+  animation: trocarFoto 0.45s var(--ease);
+}
+
+@keyframes trocarFoto {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  45% {
+    opacity: 0.35;
+    transform: scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulsarDestaque {
+  0%,
+  100% {
+    outline-color: var(--accent);
+  }
+  50% {
+    outline-color: var(--focus);
+  }
+}
+
+.campo-erro {
+  border-bottom-color: #b91c1c !important;
+  animation: tremer 0.35s ease;
+}
+
+@keyframes tremer {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-4px);
+  }
+  75% {
+    transform: translateX(4px);
+  }
+}
+
+.msg-erro {
+  display: block;
+  margin-top: 0.35rem;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  color: #b91c1c;
+  letter-spacing: 0.04em;
+}
+
+#acoes button:active,
+#btnAtualizarContato:active {
+  animation: cliqueBotao 0.2s ease;
+}
+
+@keyframes cliqueBotao {
+  50% {
+    transform: scale(0.97);
+  }
+}
+
+@media (max-width: 51.99rem) {
+  header {
+    padding: var(--space-3) var(--space-2);
+  }
+
+  main {
+    padding: var(--space-2);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  #estatisticas {
+    grid-template-columns: 1fr;
+  }
+
+  #preferencias > div {
+    grid-template-columns: 1fr;
+    gap: var(--space-1);
+  }
+
+  #valorFonte {
+    text-align: left;
+  }
+
+  #acoes {
+    flex-direction: column;
+  }
+
+  #acoes button,
+  #btnAtualizarContato {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
