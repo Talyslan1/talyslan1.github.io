@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AT14 - Painel Acadêmico Interativo</title>
+
+    <link rel="stylesheet" href="at14.css">
+</head>
+<body>
+
+<header>
+    <h1 id="tituloPagina">
+        Painel Acadêmico do Estudante
+    </h1>
+
+    <p id="subtituloPagina">
+        Utilize JavaScript e DOM para tornar esta página interativa.
+    </p>
+</header>
+
+<main>
+
+    <section id="perfil">
+
+        <h2>Perfil do Estudante</h2>
+
+        <img
+            id="fotoPerfil"
+            src="imagens/perfil1.jpg"
+            alt="Foto do estudante"
+            width="200">
+
+        <h3 id="nomePerfil">
+            João Silva
+        </h3>
+
+        <p id="matriculaPerfil">
+            Matrícula: 202500123
+        </p>
+
+        <p id="cursoPerfil">
+            Curso: Técnico em Informática
+        </p>
+
+        <p id="biografiaPerfil">
+            Estudante interessado em programação, banco de dados,
+            desenvolvimento web e computação em nuvem.
+        </p>
+
+    </section>
+
+    <hr>
+
+    <section id="preferencias">
+
+        <h2>Preferências Visuais</h2>
+
+        <div>
+
+            <label for="temaSelect">
+                Tema:
+            </label>
+
+            <select id="temaSelect">
+
+                <option value="claro">
+                    Claro
+                </option>
+
+                <option value="escuro">
+                    Escuro
+                </option>
+
+                <option value="azul">
+                    Azul
+                </option>
+
+            </select>
+
+        </div>
+
+        <br>
+
+        <div>
+
+            <label for="fonteRange">
+                Tamanho da fonte:
+            </label>
+
+            <input
+                type="range"
+                id="fonteRange"
+                min="12"
+                max="36"
+                value="16">
+
+            <span id="valorFonte">
+                16px
+            </span>
+
+        </div>
+
+        <br>
+
+        <div>
+
+            <input
+                type="checkbox"
+                id="mostrarBio"
+                checked>
+
+            <label for="mostrarBio">
+                Exibir biografia
+            </label>
+
+        </div>
+
+    </section>
+
+    <hr>
+
+    <section id="contato">
+
+        <h2>Atualizar Informações de Contato</h2>
+
+        <form>
+
+            <div>
+
+                <label for="emailInput">
+                    E-mail:
+                </label>
+
+                <input
+                    type="email"
+                    id="emailInput"
+                    placeholder="Digite seu e-mail">
+
+            </div>
+
+            <br>
+
+            <div>
+
+                <label for="telefoneInput">
+                    Telefone:
+                </label>
+
+                <input
+                    type="text"
+                    id="telefoneInput"
+                    placeholder="Digite seu telefone">
+
+            </div>
+
+            <br>
+
+            <button
+                type="button"
+                id="btnAtualizarContato">
+
+                Atualizar Contato
+
+            </button>
+
+        </form>
+
+        <h3>Resumo de Contato</h3>
+
+        <p id="emailExibido">
+            E-mail: não informado
+        </p>
+
+        <p id="telefoneExibido">
+            Telefone: não informado
+        </p>
+
+    </section>
+
+    <hr>
+
+    <section id="estatisticas">
+
+        <h2>Estatísticas da Sessão</h2>
+
+        <p>
+            Total de ações realizadas:
+            <strong id="contadorAcoes">
+                0
+            </strong>
+        </p>
+
+        <p>
+            Última ação:
+            <strong id="ultimaAcao">
+                Nenhuma
+            </strong>
+        </p>
+
+    </section>
+
+    <hr>
+
+    <section id="acoes">
+
+        <h2>Ações do Perfil</h2>
+
+        <button id="btnAlterarNome">
+            Alterar Nome
+        </button>
+
+        <button id="btnAlterarCurso">
+            Alterar Curso
+        </button>
+
+        <button id="btnAlterarFoto">
+            Alterar Foto
+        </button>
+
+        <button id="btnDestacarPerfil">
+            Destacar Perfil
+        </button>
+
+        <button id="btnRestaurar">
+            Restaurar Perfil
+        </button>
+
+    </section>
+
+</main>
+
+<footer>
+
+    <p>
+        Programação Web I - AT14
+    </p>
+
+</footer>
+
+<script src="at14.js"></script>
+
+</body>
+</html>
