@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cap. 15 — Inscrição de Alunos</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+    <p class="voltar"><a href="../index.html">← Voltar para a página principal</a></p>
+
+    <header>
+        <h1>Inscrição para Novos Alunos</h1>
+        <p>IFAL — Escola Técnica</p>
+        <nav class="nav-paginas" aria-label="Navegação do capítulo">
+            <a href="inscricoes.html">Ver inscrições enviadas</a>
+        </nav>
+    </header>
+
+    <div id="avisoRascunho" class="aviso-rascunho" hidden role="status">
+        <p>Rascunho restaurado automaticamente. Continue de onde parou.</p>
+        <button type="button" id="btnDescartarRascunho" class="aviso-rascunho__btn">Descartar rascunho</button>
+    </div>
+
+    <p id="statusRascunho" class="status-rascunho" aria-live="polite" hidden></p>
+
+    <main id="main-content">
+        <form id="formInscricao" novalidate>
+
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+
+                <div class="campo">
+                    <label for="nome">Nome completo</label>
+                    <input
+                        type="text"
+                        id="nome"
+                        name="nome"
+                        required
+                        minlength="3"
+                        maxlength="100"
+                        placeholder="Digite seu nome completo"
+                        autocomplete="name"
+                    >
+                    <span class="erro" id="erro-nome" role="alert" aria-live="polite"></span>
+                </div>
+
+                <div class="campo">
+                    <label for="email">E-mail</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        required
+                        maxlength="150"
+                        placeholder="seu@email.com"
+                        autocomplete="email"
+                    >
+                    <span class="erro" id="erro-email" role="alert" aria-live="polite"></span>
+                </div>
+
+                <div class="campo">
+                    <label for="telefone">Telefone</label>
+                    <input
+                        type="tel"
+                        id="telefone"
+                        name="telefone"
+                        required
+                        maxlength="15"
+                        placeholder="(82) 99999-9999"
+                        autocomplete="tel"
+                    >
+                    <span class="erro" id="erro-telefone" role="alert" aria-live="polite"></span>
+                </div>
+
+                <div class="campo">
+                    <label for="nascimento">Data de nascimento</label>
+                    <input
+                        type="date"
+                        id="nascimento"
+                        name="nascimento"
+                        required
+                    >
+                    <span class="erro" id="erro-nascimento" role="alert" aria-live="polite"></span>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Curso e Interesses</legend>
+
+                <div class="campo">
+                    <label for="curso">Curso</label>
+                    <select id="curso" name="curso" required>
+                        <option value="">Selecione um curso</option>
+                        <option value="informatica">Técnico em Informática</option>
+                        <option value="administracao">Técnico em Administração</option>
+                        <option value="enfermagem">Técnico em Enfermagem</option>
+                        <option value="edificacoes">Técnico em Edificações</option>
+                        <option value="eletrotecnica">Técnico em Eletrotécnica</option>
+                    </select>
+                    <span class="erro" id="erro-curso" role="alert" aria-live="polite"></span>
+                </div>
+
+                <div class="campo">
+                    <span class="label-grupo" id="label-turno">Turno</span>
+                    <div class="grupo-radio" role="radiogroup" aria-labelledby="label-turno">
+                        <label for="turno-matutino">
+                            <input type="radio" id="turno-matutino" name="turno" value="matutino" required>
+                            Matutino
+                        </label>
+                        <label for="turno-vespertino">
+                            <input type="radio" id="turno-vespertino" name="turno" value="vespertino">
+                            Vespertino
+                        </label>
+                        <label for="turno-noturno">
+                            <input type="radio" id="turno-noturno" name="turno" value="noturno">
+                            Noturno
+                        </label>
+                    </div>
+                    <span class="erro" id="erro-turno" role="alert" aria-live="polite"></span>
+                </div>
+
+                <div class="campo">
+                    <span class="label-grupo" id="label-interesses">Áreas de interesse (mínimo 2)</span>
+                    <div class="grupo-checkbox" role="group" aria-labelledby="label-interesses">
+                        <label for="interesse-programacao">
+                            <input type="checkbox" id="interesse-programacao" name="interesses" value="programacao">
+                            Programação
+                        </label>
+                        <label for="interesse-redes">
+                            <input type="checkbox" id="interesse-redes" name="interesses" value="redes">
+                            Redes de Computadores
+                        </label>
+                        <label for="interesse-banco-dados">
+                            <input type="checkbox" id="interesse-banco-dados" name="interesses" value="banco-dados">
+                            Banco de Dados
+                        </label>
+                        <label for="interesse-design">
+                            <input type="checkbox" id="interesse-design" name="interesses" value="design">
+                            Design Digital
+                        </label>
+                        <label for="interesse-robotica">
+                            <input type="checkbox" id="interesse-robotica" name="interesses" value="robotica">
+                            Robótica
+                        </label>
+                        <label for="interesse-empreendedorismo">
+                            <input type="checkbox" id="interesse-empreendedorismo" name="interesses" value="empreendedorismo">
+                            Empreendedorismo
+                        </label>
+                    </div>
+                    <span class="erro" id="erro-interesses" role="alert" aria-live="polite"></span>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Segurança</legend>
+
+                <div class="campo">
+                    <label for="senha">Senha</label>
+                    <div class="campo-senha">
+                        <input
+                            type="password"
+                            id="senha"
+                            name="senha"
+                            required
+                            minlength="8"
+                            maxlength="64"
+                            placeholder="Mínimo 8 caracteres"
+                            autocomplete="new-password"
+                        >
+                        <button type="button" id="btnToggleSenha" class="btn-toggle-senha" aria-label="Mostrar senha" aria-pressed="false">
+                            <img
+                                src="../public/images/eye-visibility/eye-visible.png"
+                                alt=""
+                                class="btn-toggle-senha__icone"
+                                width="24"
+                                height="24"
+                            >
+                        </button>
+                    </div>
+                    <div class="forca-senha" aria-hidden="true">
+                        <div class="forca-senha__barra" id="barraForcaSenha"></div>
+                    </div>
+                    <span class="forca-senha__texto" id="textoForcaSenha"></span>
+                    <span class="erro" id="erro-senha" role="alert" aria-live="polite"></span>
+                </div>
+
+                <div class="campo">
+                    <label for="confirmarSenha">Confirmar senha</label>
+                    <div class="campo-senha">
+                        <input
+                            type="password"
+                            id="confirmarSenha"
+                            name="confirmarSenha"
+                            required
+                            minlength="8"
+                            maxlength="64"
+                            placeholder="Repita a senha"
+                            autocomplete="new-password"
+                        >
+                        <button type="button" id="btnToggleConfirmarSenha" class="btn-toggle-senha" aria-label="Mostrar confirmação de senha" aria-pressed="false">
+                            <img
+                                src="../public/images/eye-visibility/eye-visible.png"
+                                alt=""
+                                class="btn-toggle-senha__icone"
+                                width="24"
+                                height="24"
+                            >
+                        </button>
+                    </div>
+                    <span class="erro" id="erro-confirmarSenha" role="alert" aria-live="polite"></span>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Mensagem e Anexos</legend>
+
+                <div class="campo">
+                    <label for="mensagem">Mensagem</label>
+                    <textarea
+                        id="mensagem"
+                        name="mensagem"
+                        required
+                        minlength="50"
+                        maxlength="500"
+                        rows="5"
+                        placeholder="Conte-nos por que deseja estudar conosco (mínimo 50 caracteres)"
+                    ></textarea>
+                    <span class="contador" id="contadorMensagem" aria-live="polite">0 / 500 caracteres</span>
+                    <span class="erro" id="erro-mensagem" role="alert" aria-live="polite"></span>
+                </div>
+
+                <div class="campo">
+                    <label for="foto">Foto (opcional)</label>
+                    <input
+                        type="file"
+                        id="foto"
+                        name="foto"
+                        accept="image/jpeg,image/png,.jpg,.jpeg,.png"
+                    >
+                    <span class="erro" id="erro-foto" role="alert" aria-live="polite"></span>
+                    <figure id="previewFoto" class="preview-foto" hidden>
+                        <img id="imgPreview" src="" alt="Pré-visualização da foto enviada">
+                        <figcaption>Pré-visualização</figcaption>
+                    </figure>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Termos</legend>
+
+                <div class="campo campo-termos">
+                    <label for="termos">
+                        <input type="checkbox" id="termos" name="termos" required>
+                        Li e aceito os termos de inscrição e a política de privacidade
+                    </label>
+                    <span class="erro" id="erro-termos" role="alert" aria-live="polite"></span>
+                </div>
+            </fieldset>
+
+            <div class="acoes">
+                <button type="submit" id="btnEnviar">Enviar</button>
+                <button type="reset" id="btnLimpar">Limpar</button>
+            </div>
+
+        </form>
+    </main>
+
+    <dialog id="modalConfirmacao" class="modal">
+        <h2>Confirmar envio</h2>
+        <p>Revise seus dados antes de confirmar a inscrição:</p>
+        <dl id="resumoConfirmacao" class="modal__resumo"></dl>
+        <div class="modal__acoes">
+            <button type="button" id="btnConfirmarEnvio" class="btn-primario">Confirmar envio</button>
+            <button type="button" id="btnCancelarEnvio" class="btn-secundario">Voltar e editar</button>
+        </div>
+    </dialog>
+
+    <div id="overlaySucesso" class="overlay-sucesso" hidden aria-hidden="true">
+        <div id="confete" class="confete-container" aria-hidden="true"></div>
+        <div class="overlay-sucesso__conteudo">
+            <div class="overlay-sucesso__icone" id="iconeSucesso">✓</div>
+            <h2>Inscrição enviada com sucesso!</h2>
+            <p id="mensagemSucesso">Em breve entraremos em contato pelo e-mail informado.</p>
+            <div class="overlay-sucesso__acoes">
+                <a href="inscricoes.html" class="btn-link-sucesso">Ver inscrições enviadas</a>
+                <button type="button" id="btnFecharSucesso">Fechar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/util.js"></script>
+    <script src="js/validacoes.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+</html>

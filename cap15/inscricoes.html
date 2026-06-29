@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cap. 15 — Inscrições Enviadas</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+    <p class="voltar"><a href="../index.html">← Voltar para a página principal</a></p>
+
+    <header>
+        <h1>Inscrições Enviadas</h1>
+        <p>Visualize os cadastros confirmados neste navegador</p>
+        <nav class="nav-paginas" aria-label="Navegação do capítulo">
+            <a href="index.html">Nova inscrição</a>
+        </nav>
+    </header>
+
+    <main id="main-content" class="pagina-inscricoes">
+        <div class="inscricoes-cabecalho">
+            <p id="totalInscricoes" class="inscricoes-total" aria-live="polite"></p>
+            <button type="button" id="btnLimparInscricoes" class="btn-perigo" hidden>
+                Limpar todas
+            </button>
+        </div>
+
+        <p id="listaVazia" class="lista-vazia" hidden>
+            Nenhuma inscrição enviada ainda.
+            <a href="index.html">Preencher formulário</a>
+        </p>
+
+        <ul id="listaInscricoes" class="lista-inscricoes"></ul>
+    </main>
+
+    <dialog id="modalDetalhe" class="modal modal-detalhe">
+        <h2 id="detalheTitulo">Detalhes da inscrição</h2>
+        <p id="detalheEnviadoEm" class="detalhe-enviado"></p>
+
+        <div id="detalheFoto" class="detalhe-foto" hidden>
+            <img id="detalheImg" src="" alt="Foto do inscrito">
+        </div>
+
+        <dl id="detalheDados" class="modal__resumo"></dl>
+
+        <section class="detalhe-mensagem">
+            <h3>Mensagem</h3>
+            <p id="detalheMensagem"></p>
+        </section>
+
+        <div class="modal__acoes">
+            <button type="button" id="btnFecharDetalhe" class="btn-secundario">Fechar</button>
+            <button type="button" id="btnExcluirDetalhe" class="btn-perigo">Excluir inscrição</button>
+        </div>
+    </dialog>
+
+    <script src="js/util.js"></script>
+    <script src="js/inscricoes.js"></script>
+
+</body>
+</html>
